@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+header,
+footer {
+  background-color: $grey;
+  color: $black;
+  padding: 0.5rem;
+}
+
+header {
+  h1 {
+    margin-left: 2rem;
+    font-size: $largeFont;
+  }
+}
+
+footer {
+  text-align: right;
+
+  .small {
+    font-size: $fontSize;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,53 @@
+@import './variables.scss';
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $fontSize;
+
+  .app {
+    background: $white;
+    min-height: $appHeight;
+    h1 {
+      display: inline-block;
+      font-size: $fontSize;
+    }
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      width: 50%;
+      .searchTerm {
+        width: 70%;
+        border: 2px solid $grey;
+        padding: 16px;
+        height: 20px;
+        border-radius: 5px;
+        outline: none;
+        font-size: 18px;
+      }      
+      .button-wrapper {
+        display: flex;
+        margin: 15px 0px;
+        .searchButton {
+          margin-left: 10px;
+          width: 80px;
+          height: 32px;
+          border: none;
+          background: $darkblue;
+          text-align: center;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size: 20px;
+          outline: none;
+          font-size: 16px;
+        }
+      }
+      
+    }
+    
+  }
+}
