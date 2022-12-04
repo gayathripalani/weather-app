@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/Error.scss';
 
-const Error: React.FC = () => {
+const Error: React.FC = (errorMessage: any) => {
   return (
     <div className="error" data-testid="error">
-      Something Went Wrong
+      {errorMessage.message}
     </div>
   );
 };

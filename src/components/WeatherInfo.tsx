@@ -12,6 +12,7 @@ const WeatherInfo: React.FC = () => {
    const [weatherDetails, setWeatherDetails] = useState<Array<Weather>>([]);
    const [isLoading, setIsLoading] = useState<boolean>(true);
    var [hasError, setHasError] = useState(false);
+   var [errorMessage, setErrorMessage] = useState('Something went wrong');
 
     const getWeatherInfo = async () => {
         setIsLoading(true);
@@ -40,15 +41,12 @@ const WeatherInfo: React.FC = () => {
             };
             setWeatherDetails([myNewWeatherInfo, myNewWeatherInfo, myNewWeatherInfo]);
             setIsLoading(false);
-        } catch (e) {
+        } catch (error: any) {
             setIsLoading(false);
             setHasError(true);
+            setErrorMessage(error);
         }
     };
-  
-    useEffect(() => {
-        getWeatherInfo();
-   }, [])
 
     return (
         <div className="container">
@@ -76,7 +74,7 @@ const WeatherInfo: React.FC = () => {
             {isLoading ? (
                 <Spinner />
             ) : hasError ? (
-                <Error />
+                <Error errorMessage={errorMessage}/>
             ) : (
                 <>
                 <div className="user-list">
