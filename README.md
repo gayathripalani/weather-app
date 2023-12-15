@@ -1,6 +1,6 @@
-# user-management
+# weather-app
 
-This is a simple web app for list users and scroll to particular user onclick
+This is a simple web app for weather
 
 Development
 
@@ -14,10 +14,10 @@ Local react app - http://localhost:3000
 Run frontend locally
 
 To install dependencies -
-yarn install
+npm install
 
 To run the frontend application -
-yarn start
+npm start
 
 To run the frontend test cases -
-yarn test
+npm test
